@@ -270,7 +270,7 @@ class DA3_Streaming:
                 images = chunk_image_paths
                 # images: ['xxx.png', 'xxx.png', ...]
 
-                predictions = self.model.inference(images, ref_view_strategy=ref_view_strategy, process_res=504, conf_thresh_percentile= 90)
+                predictions = self.model.inference(images, ref_view_strategy=ref_view_strategy, process_res=504, conf_thresh_percentile= 95)
 
                 predictions.depth = np.squeeze(predictions.depth)
                 predictions.conf -= 1.0
